@@ -2,7 +2,7 @@
 
 <div class="container-fluid">
         <div class="row position-relative">
-            <img class="w-100 img_fliter position-relative" src="./img/1.jpeg" alt="">
+            <img class="w-100 img_fliter position-relative" src="./img/45.jpeg" alt="">
             <div class="">
                 <h1 class="fs-1 privacy_header">Log In</h1>
             </div>
