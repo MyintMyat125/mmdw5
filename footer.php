@@ -67,14 +67,14 @@
 					<div class="row">
 						<div class="col-lg-12 text-center">
 							<div class="ct-inside">
-								<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+								
 								Copyright &copy;
 								<script>
 									document.write(new Date().getFullYear());
 								</script>
 								All rights reserved | This template is made with by
-								<a href="https://colorlib.com" target="_blank">Nikobaby</a> | <a href="./privacy.php">Privacy Policy</a> | <a href="./cookie.php">Cookie Policy</a>
-								<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+								<a href="" target="_blank">Nikobaby</a> | <a href="./privacy.php">Privacy Policy</a> | <a href="./cookie.php">Cookie Policy</a>
+								
 							</div>
 						</div>
 					</div>
