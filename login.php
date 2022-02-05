@@ -33,7 +33,7 @@
                         Remember Me
                         </label>
                     </div>
-                    <a href="./login.php" class="text-dark text-decoration-none">Sign in</a>
+                    <a href="./register.php" class="text-dark text-decoration-none">Sign in</a>
 
                     </div>
                 </div>
