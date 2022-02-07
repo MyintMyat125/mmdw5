@@ -1,5 +1,5 @@
 <?php 
-    include('../header.php');
+    include('./header.php');
     include('../dbconfig.php');
     $sql = "SELECT * FROM users";
     $result = $conn->query($sql);
@@ -8,7 +8,7 @@
     <div class="row">
         <?php include('../sidebar.php');?>
 
-        <main class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+        <main class="col-md-9 offset-md-3 ml-sm-auto col-lg-10 offset-lg-2 p-0">
             <div
                 class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                 <h1 class="h2">Users</h1>
@@ -27,14 +27,14 @@
                             <th>User Name</th>
                             <th>Email</th>
                             <th>Password</th>
-                            <th></th>
+                            <th>Action</th>
                         </tr>
                         <?php
                             while($row = $result->fetch_assoc())
                             {
                         ?>
                         <tr>
-                            <td><?php echo $row['firstname'].'-'.$row['surname'];?></td>
+                            <td><?php echo $row['name'];?></td>
                             <td><?php echo $row['email'];?></td>
                             <td><?php echo $row['password'];?></td>
                             <td>
@@ -57,4 +57,4 @@
         </main>
     </div>
 </div>
-<?php include('../footer.php');?>
+<?php include('./footer.php');?>

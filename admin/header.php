@@ -9,14 +9,9 @@
     <meta name="generator" content="Hugo 0.72.0">
     <title>Dashboard Template · Bootstrap</title>
 
-   <link rel="stylesheet" href="../css/bootstrap.min.css">
-   <link rel="stylesheet" href="./css/admin.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/admin.css">
 
-
-
-   
-
-   
 </head>
 
 <body>
