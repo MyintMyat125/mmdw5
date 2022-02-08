@@ -1,13 +1,13 @@
 <?php
-   $servername ="localhost"; 
-   $username = "root"; 
+    $servername ="localhost"; 
+    $username = "root";
     $password = ""; 
-   $dbname = "mm_dw5"; 
+    $dbname = "mm_dw5";
 
-   $conn = new mysqli($servername,$username,$password,$dbname);
-   // var_dump($conn); 
+    $conn = new mysqli($servername,$username,$password,$dbname);
+    // var_dump($conn); 
 
     if($conn->connect_error){
         die('error'.$conn->connect_error);
-  }
+    }
 ?>

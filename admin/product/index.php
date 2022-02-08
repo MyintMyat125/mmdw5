@@ -1,62 +1,87 @@
 <?php 
     include('./header.php');
     include('../dbconfig.php');
-    $sql = "SELECT * FROM products";
+
+    $sql = "SELECT * FROM product";
+
     $result = $conn->query($sql);
 ?>
-<div class="container-fluid">
-    <div class="row">
-        <?php include('../sidebar.php');?>
 
-        <main class="col-md-9 offset-md-3 ml-sm-auto col-lg-10 offset-lg-2 p-0">
-            <div
-                class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                <h1 class="h2">Products</h1>
+    <div class="container-fluid">
+		<div class="row">
+				<div class="col-md-12 text-center">
+					<h1 class="fw-bolder">Users Data Dashboard</h1>
+				</div>
+		</div>
+		<div class="row">
+				<div class="col-md-12"><a href="./adduser.php" class="btn btn-success mb-3 float-start">Add User</a></div>
+				<div class="col-md-12 mb-3">
+					<div class="card">
+						<div class="card-header">
+							Product Data Table
+						</div>
 
-            </div>
+						<div class="card-body">
+							<?php 
+								if($result->num_rows > 0){
+							?>
+							<div class="table-responsive">
+							<table
+								id="datatable"
+								class="table table-striped data-table w-100"
+							>
+								<thead>
+									<tr >
+										<th >Product No.</th>
+										<th >Product Name</th>
+										<th >Price</th>
+										<th >Description</th>
+										<th >Images</th>
+										<th >Action</th>
+									</tr>
+								</thead>
+								<tbody>
+								
+								<?php
+									while($row = mysqli_fetch_assoc($result)){
+								?>
 
-            <div class="row">
-                <div class="col-md-12">
-                    <a href="adduser.php" class="btn btn-success">Add Products</a>
-                    <?php
-                    if($result->num_rows > 0)
-                    {
-                ?>
-                    <table class="table">
-                        <tr>
-                            <th>Name</th>
-                            <th>Price</th>
-                            <th>Description</th>
-                            <th>Images</th>
-                            <th></th>
-                        </tr>
-                        <?php
-                            while($row = $result->fetch_assoc())
-                            {
-                        ?>
-                        <tr>
-                            <td><?php echo $row['name'];?></td>
-                            <td><?php echo $row['price'];?></td>
-                            <td class="w-50"><?php echo $row['description'];?></td>
-                            <td><?php echo $row['images'];?></td>
-                            <td>
-                                <a href="delete.php?id=<?php echo $row['id'];?>" class="btn btn-danger">Delete</a>
+								<tr >
+									<td><?php echo $row['id']; ?></td>
+									<td><?php echo $row['name']; ?></td>
+									<td><?php echo $row['price']; ?></td>
+									<td><?php echo $row['description']; ?></td>
+									<td><?php echo $row['images']; ?></td>
+									<td >
+										<a href="edit.php?id=<?php echo $row['id']; ?>" class="btn btn-primary btn-sm">Edit</a>
+                                        <a href="delete.php?id=<?php echo $row['id']; ?>" class="btn btn-danger btn-sm">Delete</a>
+									</td>
+								</tr>
+								
+								<?php
+									}
+								?>
 
-                                <a href="edituser.php?id=<?php echo $row['id'];?>" class="btn btn-primary">Edit</a>
-                            </td>
-                        </tr>
-                        <?php
-                            }
-                        ?>
-                    </table>
-                    <?php
-                    }else{
-                        echo "There is no records.";
-                    }
-                ?>
-                </div>
-            </div>
-        </main>
+								</tbody>
+							</table>
+							</div>
+						<?php } else{
+							echo"There is no records.";
+						}
+
+						?>
+						</div>
+					</div>
+				</div>
+		</div>
     </div>
-</div>
+
+	<script src="../js/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready( function () {
+			$('#datatable').DataTable();
+		} );
+	</script>
+
+
 <?php include('./footer.php');?>

@@ -8,14 +8,11 @@
 
     $result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_assoc($result);
-    
 
-    if($row['name'] === $name AND $row['password'] === $password){
+    if($name === $row['name'] AND $password === $row['password']){
         header("location:index.php");
     }else{
-        
         header("location:login.php");
     }
-  
 
 ?>
