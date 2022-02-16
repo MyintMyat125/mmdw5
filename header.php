@@ -2,11 +2,10 @@
 <html lang="zxx">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Activitar Template" />
-		<meta name="keywords" content="Activitar, unica, creative, html" />
+		
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<title>Activitar Gym Products</title>
+		<title>HGE GYM Product</title>
 
 		<!-- Google Font -->
 		<link rel="stylesheet" href="./libs/fontawesomepro/css/all.min.css" />
