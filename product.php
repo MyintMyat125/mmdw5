@@ -33,7 +33,7 @@
                         <!-- Custom content-->
                         <div class="media align-items-lg-center flex-column flex-lg-row p-3">
                         <div class="media-body order-2 order-lg-1">
-                            <h1 class="mt-0 font-weight-bold mb-2"><?php echo $row['name']; ?></h1>
+                            <h6 class="mt-0 font-weight-bold mb-2"><?php echo $row['name']; ?></h6>
                             <p class="font-italic text-muted mb-0 small"><?php echo substr($row['description'],0, 150)."...."; ?></p>
                             <div class="d-flex align-items-center justify-content-between mt-1">
                             <h6 class="font-weight-bold my-2">$120.00</h6>

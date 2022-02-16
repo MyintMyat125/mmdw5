@@ -3,7 +3,7 @@
         <div class="row position-relative">
             <img class="w-100 img_fliter" src="./img/18.jpeg" alt="">
             <div class="">
-                <h1 class="fs-1 privacy_header">About Us</h1>
+                <h1 class="fs-1 privacy_header">FAQs</h1>
             </div>
         </div>
     </div>
@@ -25,8 +25,8 @@
                     ?>
                         
                 <div class="global-label">
-                    <div class="global-label-text">
-                    Mrequently asked question
+                    <div class="global-label-text text-center">
+                    FAQs
                     </div>
                 </div>
                 <!--1 question-->

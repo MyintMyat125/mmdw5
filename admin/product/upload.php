@@ -8,11 +8,10 @@
     $img = $_FILES['img']['name'];
     $tmp = $_FILES['img'] ['tmp_name'];
 
-    if($img){
-        move_uploaded_file($tmp, "img/$img");
+    $imgupload = move_uploaded_file($tmp, "img/$img");
 
-    }
-        $sql = "INSERT INTO `product`(`name`, `price`, `description`, `review`, `images`) VALUES ('$name','$price','$description', '$review' ,'$img')";
+    if($imgupload){
+        $sql = "INSERT INTO `product`(`name`, `price`, `description`, `review`, `images`) VALUES ('$name','$price','$description', '$review','$img')";
         
         $result = $conn->query($sql);
 
@@ -21,5 +20,6 @@
         }else{
             $conn->error;
         }
+    }
     $conn->close();
 ?>
