@@ -54,22 +54,22 @@
 						<nav class="mainmenu mobile-menu">
 							<ul>
 								<li
-									<?php if($_SERVER['SCRIPT_NAME']=="/git/myintm_dw5/index.php") { ?>  class="active"   <?php   }  ?>
+									<?php if($_SERVER['SCRIPT_NAME']=="/git/mmdw5/index.php") { ?>  class="active"   <?php   }  ?>
 								><a href="./index.php">Home</a></li>
 								<li
-									<?php if($_SERVER['SCRIPT_NAME']=="/git/myintm_dw5/product.php") { ?>  class="active"   <?php   }  ?>
+									<?php if($_SERVER['SCRIPT_NAME']=="/git/mmdw5/product.php") { ?>  class="active"   <?php   }  ?>
 								><a href="./product.php">Product</a></li>
 								<li
-									<?php if($_SERVER['SCRIPT_NAME']=="/git/myintm_dw5/about.php") { ?>  class="active"   <?php   }  ?>
+									<?php if($_SERVER['SCRIPT_NAME']=="/git/mmdw5/about.php") { ?>  class="active"   <?php   }  ?>
 								><a href="./about.php">About Us</a></li>
 								<li
-									<?php if($_SERVER['SCRIPT_NAME']=="/git/myintm_dw5/contact.php") { ?>  class="active"   <?php   }  ?>
+									<?php if($_SERVER['SCRIPT_NAME']=="/git/mmdw5/contact.php") { ?>  class="active"   <?php   }  ?>
 								><a href="./contact.php">Contact us</a></li>
 								<li
-									<?php if($_SERVER['SCRIPT_NAME']=="/git/myintm_dw5/service.php") { ?>  class="active"   <?php   }  ?>
+									<?php if($_SERVER['SCRIPT_NAME']=="/git/mmdw5/service.php") { ?>  class="active"   <?php   }  ?>
 								><a href="./service.php">Service</a></li>
 								<li
-									<?php if($_SERVER['SCRIPT_NAME']=="/git/myintm_dw5/faq.php") { ?>  class="active"   <?php   }  ?>
+									<?php if($_SERVER['SCRIPT_NAME']=="/git/mmdw5/faq.php") { ?>  class="active"   <?php   }  ?>
 								><a href="./faq.php">FAQ</a></li>
 							</ul>
 						</nav>
