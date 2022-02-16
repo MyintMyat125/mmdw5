@@ -15,7 +15,7 @@
 				</div>
 		</div>
 		<div class="row">
-				<div class="col-md-12"><a href="./faqform.php" class="btn btn-success mb-3 float-start">Add FAQ</a></div>
+				<div class="col-md-12"><a href="./faqform.php" class="btn btn-success mb-3 float-start">ADD FAQ</a></div>
 				<div class="col-md-12 mb-3">
 					<div class="card">
 						<div class="card-header">
@@ -34,7 +34,8 @@
 								<thead>
 									<tr>
                                         <th >Question No.</th>
-										<th >User ID</th>
+										<th >User Id</th>
+										<th >User Name</th>
 										<th >Question</th>
 										<th >Answer</th>
 										<th >Action</th>
@@ -43,14 +44,14 @@
 								<tbody>
 								
 								<?php
-									while($row = mysqli_fetch_assoc($result)){
+									while($row = $result->fetch_assoc()){
 								?>
-
-								<tr">
+								<tr>
 									<td><?php echo $row['id']; ?></td>
 									<td><?php echo $row['user_id']; ?></td>
-									<td><?php echo $row['question']; ?></td>
-									<td><?php echo $row['answer']; ?></td>
+									<td><?php echo $row['name']; ?></td>
+									<td class="text-warp"><?php echo $row['question']; ?></td>
+									<td class="text-warp"><?php echo $row['answer']; ?></td>
 									<td >
 										<a href="edit.php?id=<?php echo $row['id']; ?>" class="btn btn-primary btn-sm">Edit</a>
                                         <a href="delete.php?id=<?php echo $row['id']; ?>" class="btn btn-danger btn-sm">Delete</a>

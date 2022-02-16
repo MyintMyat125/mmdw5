@@ -5,9 +5,8 @@
 	$sql = "SELECT faq.*, users.name 
 	FROM  `faq` INNER JOIN users ON faq.user_id = users.id WHERE faq.id=".$_GET['id'];
 
-    $result = mysqli_query($conn, $sql);
-    $row = mysqli_fetch_assoc($result);
-	
+    $result = $conn->query($sql);
+    $row = $result->fetch_assoc();
 ?>
 
 	<div class="container-fluid">

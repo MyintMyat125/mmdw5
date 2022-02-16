@@ -9,7 +9,7 @@
     $sql = "UPDATE `faq` SET `user_id` = '$user_id', `question` = '$question', `answer` = '$answer'
     WHERE `faq`.`id` = ".$_GET['id'];
 
-    $result = mysqli_query($conn, $sql);
+    $result = $conn->query($sql);
 
     if($result == TRUE){
         header('location:index.php');

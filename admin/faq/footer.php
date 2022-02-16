@@ -4,7 +4,6 @@
 		<script src="../js/bootstrap.min.js"></script>
 		<script src="../js/dataTables.bootstrap5.min.js"></script>
 		<script src="../js/jquery.dataTables.min.js"></script>
-		<script src="../js/jquery-3.6.0.min.js"></script>
 
 		<script>
 			var el = document.getElementById("wrapper");

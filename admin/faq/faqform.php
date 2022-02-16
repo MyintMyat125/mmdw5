@@ -2,7 +2,7 @@
     require('../dbconfig.php');
 
     $sql = "SELECT * FROM `users`";
-    $result = mysqli_query($conn, $sql);
+    $result = $conn->query($sql);
 ?>
 
 <div class="container-fluid">
@@ -16,10 +16,11 @@
                 <form action="./create.php" method="post">
                     <div class="input-group mb-3">
                         <label class="input-group-text" for="inputGroupSelect01">Name</label>
+                        <?php if($result->num_rows > 0){ ?>
                         <select class="form-select" name="user_id"  id="inputGroupSelect01">
-                        <option selected disabled>Open this select users</option>
+                            <option selected disabled>Open this select users</option>
                             <?php
-                                while($row = mysqli_fetch_assoc($result)){
+                                while($row = $result->fetch_assoc()){
                                 ?>
                             <option value="<?php echo $row['id']; ?>">
                             <?php echo $row['name']; ?>
@@ -28,6 +29,7 @@
                                 }
                             ?>
                         </select>
+                        <?php } ?>
                     </div>
                     <div class="form-floating mb-3">
                         <textarea class="form-control" name="question" placeholder="Leave a comment here" id="floatingTextarea"></textarea>

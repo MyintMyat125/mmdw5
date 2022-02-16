@@ -76,3 +76,9 @@
 		margin-left: -15rem;
 	}
 }
+
+.dropdown-menu[data-bs-popper] {
+	top: 100%;
+	left: -75%;
+	margin-top: 0.125rem;
+}

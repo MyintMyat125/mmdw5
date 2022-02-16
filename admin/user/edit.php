@@ -5,8 +5,8 @@
     $sql = "SELECT * FROM users
             WHERE id =". $id;
 
-    $result = mysqli_query($conn, $sql);
-    $row = mysqli_fetch_assoc($result);
+    $result = $conn->query($sql);
+    $row = $result->fetch_assoc();
 ?>
 
 <div class="container-fluid editsection">

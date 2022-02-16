@@ -8,7 +8,7 @@
     $sql = "INSERT INTO users(`name`,`email`,`password`)
             VALUES('$name', '$email', '$password')";
 
-    $result = mysqli_query($conn,$sql);
+    $result = $conn->query($sql);
 
     if($result){
         header('location:index.php');

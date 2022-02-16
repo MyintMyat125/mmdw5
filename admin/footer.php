@@ -1,6 +1,5 @@
 			</div>
 		</div>
-		<!-- /#page-content-wrapper -->
 
 		<script src="./js/bootstrap.min.js"></script>
 		<script>

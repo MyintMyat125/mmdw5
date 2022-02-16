@@ -43,7 +43,7 @@
 								<tbody>
 								
 								<?php
-									while($row = mysqli_fetch_assoc($result)){
+									while($row = $result->fetch_assoc()){
 								?>
 
 								<tr class="text-center">
@@ -67,7 +67,6 @@
 						<?php } else{
 							echo"There is no records.";
 						}
-
 						?>
 						</div>
 					</div>

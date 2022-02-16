@@ -10,7 +10,7 @@
     VALUES ('$user_id', '$question', '$answer');
     ";
 
-    $result = mysqli_query($conn, $sql);
+    $result = $conn->query($sql);
 
     if(!$result){
         echo $conn->error;

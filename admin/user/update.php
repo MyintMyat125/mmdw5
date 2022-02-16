@@ -9,7 +9,7 @@
             SET `name` = '$name', `email` = '$email', `password` = '$password'
             WHERE id=".$_GET['id'];
 
-    $result = mysqli_query($conn, $sql);
+    $result = $conn->query($sql);
 
     if($result == TRUE){
         header('location:index.php');

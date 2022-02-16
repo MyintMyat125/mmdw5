@@ -10,11 +10,11 @@
     <div class="container-fluid">
 		<div class="row">
 				<div class="col-md-12 text-center">
-					<h1 class="fw-bolder">Users Data Dashboard</h1>
+					<h1 class="fw-bolder">Product Data Dashboard</h1>
 				</div>
 		</div>
 		<div class="row">
-				<div class="col-md-12"><a href="./adduser.php" class="btn btn-success mb-3 float-start">Add User</a></div>
+				<div class="col-md-12"><a href="./productupload.php" class="btn btn-success mb-3 float-start">Add Product</a></div>
 				<div class="col-md-12 mb-3">
 					<div class="card">
 						<div class="card-header">
@@ -36,6 +36,7 @@
 										<th >Product Name</th>
 										<th >Price</th>
 										<th >Description</th>
+										<th >Review</th>
 										<th >Images</th>
 										<th >Action</th>
 									</tr>
@@ -43,15 +44,18 @@
 								<tbody>
 								
 								<?php
-									while($row = mysqli_fetch_assoc($result)){
+									while($row = $result->fetch_assoc()){
 								?>
 
 								<tr >
 									<td><?php echo $row['id']; ?></td>
 									<td><?php echo $row['name']; ?></td>
 									<td><?php echo $row['price']; ?></td>
-									<td><?php echo $row['description']; ?></td>
-									<td><?php echo $row['images']; ?></td>
+									<td class="text-warp"><?php echo $row['description']; ?></td>
+									<td class="text-warp"><?php echo $row['review']; ?></td>
+									<td>
+										<img class="w-100 product_img" src="img/<?php echo $row['images'] ?>" alt="this is product image">
+									</td>
 									<td >
 										<a href="edit.php?id=<?php echo $row['id']; ?>" class="btn btn-primary btn-sm">Edit</a>
                                         <a href="delete.php?id=<?php echo $row['id']; ?>" class="btn btn-danger btn-sm">Delete</a>

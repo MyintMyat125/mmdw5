@@ -1,18 +1,22 @@
 <?php 
+    session_start();
     require('./dbconfig.php');
 
-    $name = $_POST['name'];
+    $email = $_POST['email'];
     $password = $_POST['password'];
 
-    $sql = "SELECT * FROM `users` WHERE `name` = '$name' AND `password` = '$password'";
+    $sql = "SELECT * FROM `users` WHERE `email` = '$email' AND `password` = '$password'";
 
-    $result = mysqli_query($conn, $sql);
-    $row = mysqli_fetch_assoc($result);
+    $result = $conn->query($sql);
+    $row = $result->fetch_assoc();
 
-    if($name === $row['name'] AND $password === $row['password']){
-        header("location:index.php");
+    if($row['email'] === $email AND $row['password'] === $password){
+        $_SESSION['email'] = $row['email'];
+        $_SESSION['name'] = $row['name'];
+
+        header("location:user/index.php");
     }else{
-        header("location:login.php");
+        header("location:index.php");
     }
 
 ?>

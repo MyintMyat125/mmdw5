@@ -53,11 +53,24 @@
 					<div class="nav-menu">
 						<nav class="mainmenu mobile-menu">
 							<ul>
-								<li class="active"><a href="./index.php">Home</a></li>
-								<li><a href="./product.php">Product</a></li>
-								<li><a href="./about.php">About Us</a></li>
-								<li><a href="./contact.php">Contact us</a></li>
-								<li><a href="./service.php">Service</a></li>
+								<li
+									<?php if($_SERVER['SCRIPT_NAME']=="/git/myintm_dw5/index.php") { ?>  class="active"   <?php   }  ?>
+								><a href="./index.php">Home</a></li>
+								<li
+									<?php if($_SERVER['SCRIPT_NAME']=="/git/myintm_dw5/product.php") { ?>  class="active"   <?php   }  ?>
+								><a href="./product.php">Product</a></li>
+								<li
+									<?php if($_SERVER['SCRIPT_NAME']=="/git/myintm_dw5/about.php") { ?>  class="active"   <?php   }  ?>
+								><a href="./about.php">About Us</a></li>
+								<li
+									<?php if($_SERVER['SCRIPT_NAME']=="/git/myintm_dw5/contact.php") { ?>  class="active"   <?php   }  ?>
+								><a href="./contact.php">Contact us</a></li>
+								<li
+									<?php if($_SERVER['SCRIPT_NAME']=="/git/myintm_dw5/service.php") { ?>  class="active"   <?php   }  ?>
+								><a href="./service.php">Service</a></li>
+								<li
+									<?php if($_SERVER['SCRIPT_NAME']=="/git/myintm_dw5/faq.php") { ?>  class="active"   <?php   }  ?>
+								><a href="./faq.php">FAQ</a></li>
 							</ul>
 						</nav>
 					</div>

@@ -1,3 +1,10 @@
+<?php session_start();
+if(empty($_SESSION ['email']))
+{
+    header('location:../index.php');
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -44,11 +51,11 @@
 						class="list-group-item list-group-item-action bg-transparent text-white fw-bold"
 						><i class="far fa-question-circle me-2"></i></i>FAQ</a
 					>
-					<a
-						href="#"
+					<!-- <a
+						href="../logout.php"
 						class="list-group-item list-group-item-action bg-transparent text-danger fw-bold"
 						><i class="fas fa-power-off me-2"></i>Logout</a
-					>
+					> -->
 				</div>
 			</div>
 			<!-- /#sidebar-wrapper -->
@@ -87,12 +94,10 @@
 									data-bs-toggle="dropdown"
 									aria-expanded="false"
 								>
-									<i class="fas fa-user me-2"></i>User
+									<i class="fas fa-user me-2"></i><?php echo $_SESSION['name']; ?>
 								</a>
 								<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-									<li><a class="dropdown-item" href="#">Profile</a></li>
-									<li><a class="dropdown-item" href="#">Settings</a></li>
-									<li><a class="dropdown-item" href="#">Logout</a></li>
+									<li><a class="dropdown-item" href="../logout.php">Logout</a></li>
 								</ul>
 							</li>
 						</ul>
